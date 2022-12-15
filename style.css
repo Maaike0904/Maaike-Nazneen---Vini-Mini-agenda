@@ -10,6 +10,10 @@ body {
 overflow-x: hidden;
 }
 
+main > div {
+    display: flex;
+}
+
 
 :root {
 --groen: #3A7E79;
@@ -17,6 +21,7 @@ overflow-x: hidden;
 --geel: #f4eb34;
 --black: #000000;
 --pinda: #3a7e79;
+--lichtgroen: #d5edee;
 }
 
 h1 {
@@ -199,10 +204,15 @@ margin-top:-20px;
 }
 
 /* Button plusje */
-.fas fa-plus{
-    width: 25px;
-    height:25px;
+#plus-in-rondje{
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
+    background-color: var(--pinda);
+    left: 250px;
+    top: 20px;
+    margin-left: 1em;
+    color: white;
 }
 /* Checklist */
 
@@ -253,7 +263,6 @@ fieldset{
     padding: 2em;
     border-radius: 1em;
     background: rgba(244, 235, 52,.4);
-/* border: 2px solid; */
     border: none;
     border-color: var(--geel);
 
@@ -297,6 +306,14 @@ label{
     padding: 2em auto;
     width: 100%;
     line-height: 1.5em;
+}
+
+.fieldset-dagboek{
+    padding: 2em;
+    border-radius: 1em;
+    background: var(--lichtgroen);
+    border: none;
+    border-color: var(--geel);
 }
 
 /* Logboek */
@@ -458,10 +475,15 @@ tbody {
 @container sidebar (min-width:750px){
 .checklist{
 display: grid;
-grid-template-columns: 0.6fr 2fr;
+grid-template-columns: 0.2fr 1fr;
 grid-template-rows: 1fr;
-/* background-color: var(--groen); */
 }
+
+
+.fieldset-dagboek{
+display: grid;
+grid-template-columns: 0.2fr 1fr;
+grid-template-rows: 1fr;
 }
 
 .container{
@@ -469,6 +491,8 @@ container-type: inline-size;
 container-name: sidebar;
 color: var(--groen);
 }
+}
+
 
 
 /* Mediaquery kleiner scherm */
